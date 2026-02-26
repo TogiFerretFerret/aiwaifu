@@ -14,5 +14,9 @@ liveConfig = types.LiveConnectConfig(
     media_resolution=types.MediaResolution("MEDIA_RESOLUTION_MEDIUM"),
     speech_config=types.SpeechConfig(voice_config=types.VoiceConfig(
         prebuilt_voice_config=types.PrebuiltVoiceConfig(voice_name=Config().voice_name)
-    ))
+    )),
+    context_window_compression=types.ContextWindowCompressionConfig(
+        trigger_tokens=104857,
+        sliding_window=types.SlidingWindow(target_tokens=104857)
+    )
 )
