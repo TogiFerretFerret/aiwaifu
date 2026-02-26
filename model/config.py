@@ -2,6 +2,7 @@
 # async's gonna be a NIGHTMARE
 # object oriented (orbital strike cannon)
 from google.genai import types
+from config.tools import tools
 class Config:
     def __init__(self):
         self.voice_name="Leda"
@@ -18,5 +19,6 @@ liveConfig = types.LiveConnectConfig(
     context_window_compression=types.ContextWindowCompressionConfig(
         trigger_tokens=104857,
         sliding_window=types.SlidingWindow(target_tokens=104857)
-    )
+    ),
+    tools=tools
 )
