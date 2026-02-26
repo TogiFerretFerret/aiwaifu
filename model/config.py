@@ -4,7 +4,7 @@
 class Config:
     def __init__(self):
         self.voice_name="Leda"
-        self.token=""
+        self.api_key=""
         with open("token.txt", "r") as f:
-            self.token = f.read().strip()
+            self.api_key = f.read().strip()
         self.model="gemini-2.5-flash-native-audio-preview-12-2025"
