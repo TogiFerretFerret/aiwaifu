@@ -5,5 +5,5 @@ import model.config
 conf=model.config.Config()
 client = genai.Client(
     http_options={"api_version": "v1beta"},
-    api_key=conf.api_key,
+    api_key=conf.api_key
 )
